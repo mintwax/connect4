@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Connect Four </title>
+
+
+<style type="text/css">
+<!--
+@import "connect4.css";
+-->
+</style>
+
+<script src="lib/jquery.min.js"></script>
+<script src="../lib/Connect4.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+    game = new Connect4();
+
+    $( ".grid" ).click(function(e) {
+        x = e.pageX - 100;
+        y = e.pageY - 100;
+
+        i = Math.floor(x / 50);
+        j = game.get_next_empty_slot(i);
+
+        alert(e.pageX + ' , ' + e.pageY + ' i=' + i + ' j=' + j);
+    });
+});
+
+</script>
+
+<h1>Connect Four</h1>
+
+<table class="grid">
+    <tr><td id="c0r5"><img src="blank.gif"></td>
+        <td id="c1r5"><img src="blank.gif"></td>
+        <td id="c2r5"><img src="blank.gif"></td>
+        <td id="c3r5"><img src="blank.gif"></td>
+        <td id="c4r5"><img src="blank.gif"></td>
+        <td id="c5r5"><img src="blank.gif"></td>
+        <td id="c6r5"><img src="blank.gif"></td>
+    </tr>
+
+    <tr><td id="c0r4"><img src="blank.gif"></td>
+        <td id="c1r4"><img src="blank.gif"></td>
+        <td id="c2r4"><img src="blank.gif"></td>
+        <td id="c3r4"><img src="blank.gif"></td>
+        <td id="c4r4"><img src="blank.gif"></td>
+        <td id="c5r4"><img src="blank.gif"></td>
+        <td id="c6r4"><img src="blank.gif"></td>
+    </tr>
+
+    <tr><td id="c0r3"><img src="blank.gif"></td>
+        <td id="c1r3"><img src="blank.gif"></td>
+        <td id="c2r3"><img src="blank.gif"></td>
+        <td id="c3r3"><img src="blank.gif"></td>
+        <td id="c4r3"><img src="blank.gif"></td>
+        <td id="c5r3"><img src="blank.gif"></td>
+        <td id="c6r3"><img src="blank.gif"></td>
+    </tr>
+
+    <tr><td id="c0r2"><img src="blank.gif"></td>
+        <td id="c1r2"><img src="blank.gif"></td>
+        <td id="c2r2"><img src="blank.gif"></td>
+        <td id="c3r2"><img src="blank.gif"></td>
+        <td id="c4r2"><img src="blank.gif"></td>
+        <td id="c5r2"><img src="blank.gif"></td>
+        <td id="c6r2"><img src="blank.gif"></td>
+    </tr>
+
+    <tr><td id="c0r1"><img src="blank.gif"></td>
+        <td id="c1r1"><img src="blank.gif"></td>
+        <td id="c2r1"><img src="blank.gif"></td>
+        <td id="c3r1"><img src="blank.gif"></td>
+        <td id="c4r1"><img src="blank.gif"></td>
+        <td id="c5r1"><img src="blank.gif"></td>
+        <td id="c6r1"><img src="blank.gif"></td>
+    </tr>
+
+    <tr><td id="c0r0"><img src="blank.gif"></td>
+        <td id="c1r0"><img src="blank.gif"></td>
+        <td id="c2r0"><img src="blank.gif"></td>
+        <td id="c3r0"><img src="blank.gif"></td>
+        <td id="c4r0"><img src="blank.gif"></td>
+        <td id="c5r0"><img src="blank.gif"></td>
+        <td id="c6r0"><img src="blank.gif"></td>
+    </tr>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+
+
+.grid { background:url(squares.png) no-repeat center center;
+        position: absolute;
+        top: 100px;
+        left: 100px;}
+img { display: block; }
+/*
+table { border-collapse: collapse; }
+*/
+
+

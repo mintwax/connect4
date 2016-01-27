@@ -51,26 +51,6 @@ export class Connect4 {
         } else {
             this.current_player = Connect4.info.PLAYER2;
         }
-
-        this.reset_ui();
-    }
-
-    reset_ui() {
-        // remove board listener
-        // grey out board
-        // enable new game button
-        // disable draw button
-    }
-
-    get_position_clicked(e) {
-        var i = e.pageX % 50;
-        var j = this.get_next_empty_slot(i);
-
-        if (j == -1) {
-            return null;
-        } else {
-            return ( i, j );
-        }
     }
 
     // give a column i, returns the lowest empty row index

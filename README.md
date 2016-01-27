@@ -1,45 +1,70 @@
 
 
+
+
+# Unit testing
+
+Use karma, jasmine, phantomjs for unit testing.  To run the unit tests:
+
+```
+npm install
+npm run test
+```
+
+
+# References
+
+Images from this website: http://www.cssplay.co.uk/menu/cssplay-connect-four.html
+
+
+
+
 onpage.load()
-   board.setup()
+   newbutton.click()
 
-newgame.on.click()
-   board.setup()
+newbutton.click()
+   connect4 = new Connect4();
+   reset_ui()
 
-ondraw.click
-   display player retires
-   player stats
-   board.disable()
+reset_ui() {
+   // enable_game
+   // remove all the pieces
+}
 
-board.on.click()
+get_position_clicked(e) {
+  var i = e.pageX % 50;
+  var j = connect4.get_next_empty_slot(i);
 
-    # position = { i: 0, j: 0 }
-    position = board.get_position_clicked(e)
+  if (j == -1) {
+    return null;
+  } else {
+    return i, j );
+  }
+}
+
+game.click(e)
+
+    # position = { column: 0, row: 0 }
+    position = get_position_clicked(e)
 
     # TODO - turn this into exception
     # this column is alraedy full so ignore
-    if position == nil
+    if position == null
       return
 
-    board.add_chip(position)
+    connect4.add_chip(position)
     animate_chip_drop(position)
-    connect4 = board.detect_win()
+    result = connect4.detect_win(player, postion)
 
-    if (connect4)
-        display player won
-        display winning move
-        board.disable()
-        increase player stats
+    if (result.winning_moves.length > 0) {
+        display_winning_moves(result.winning_moves);
+        disable board
+    }
 
-    if (moves > 64)
-        display no payer won
-        board.disable()
-
-    board.toggle_player()
+    connect4.toggle_player()
 )
 
 
-# use CSS3
 animate_chip_drop(position)
 
         // Scale the video to the appropriate size
@@ -50,18 +75,24 @@ animate_chip_drop(position)
     }
 });
 
+display_winning_moves() { }
+disable_game() {  // remove game listener }
+enable_game() {   // add game listener }
 
-README file
-html file
-css file
-javascript file
-test file
+## CSS ##
+  * display board
+  * display picture of chip over the column when hover over
+
 
 
 Future Scope:
-- undo (animate, option to disable/enable at new game)
-- sound of chip sliding and dropping (duration based on distance)
-- encode the background images into the page
+- user undos previous move (animate, option to disable/enable at new game)
+- user hears sound of chip sliding and dropping (duration based on distance)
+- user sees a draw game (no more moves)
+- user forfeits game
+- user sees winning connect4s
+- user sees player stats
+
 <style type="text/css">
 img.img {
 width: 75px; height: 125px;
