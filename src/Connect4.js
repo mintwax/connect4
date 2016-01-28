@@ -26,7 +26,8 @@ export class Connect4 {
         this.winner = null;
         this.last_move = null;
         this.winning_moves = [];
-        this.reset_game();
+        this.reset();
+        this.current_player = Connect4.info.PLAYER1;
 
         if (initial_rack) {
             this.rack = initial_rack;
@@ -34,7 +35,7 @@ export class Connect4 {
 
     }
 
-    reset_game() {
+    reset() {
 
         // array of columns, the top row below is the left side of the board
         this.rack = [ [ 0, 0, 0, 0, 0, 0 ],
@@ -46,11 +47,7 @@ export class Connect4 {
                       [ 0, 0, 0, 0, 0, 0 ]
                      ];
 
-        if (this.winner === null || this.winner == Connect4.info.PLAYER2) {
-            this.current_player = Connect4.info.PLAYER1;
-        } else {
-            this.current_player = Connect4.info.PLAYER2;
-        }
+        this.current_player = Connect4.info.PLAYER1;
     }
 
     // give a column i, returns the lowest empty row index

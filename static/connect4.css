@@ -1,13 +1,183 @@
 
-
-
 .grid { background:url(squares.png) no-repeat center center;
-        position: absolute;
-        top: 100px;
-        left: 100px;}
-img { display: block; }
-/*
-table { border-collapse: collapse; }
-*/
+        cursor: pointer;
+ }
 
+.none { background:url(blank.gif) no-repeat center center; }
+.player1 { background:url(red.png) no-repeat center center; background-size:contain;}
+.player2 { background:url(green.png) no-repeat center center; background-size:contain;}
+
+img { display: block; }
+
+#whoisup {
+    padding: 2px 2px 2px 2px;
+    visibility: hidden;
+    font: normal 18px/25px arial, serif;
+    width: 200px;
+}
+
+.highlight-1 {
+    background: red;
+}
+
+.highlight-2 {
+    background: green;
+}
+
+.slideDown{
+    animation-name: slideDown;
+    -webkit-animation-name: slideDown;
+
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
+
+    visibility: visible !important;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    50%{
+        transform: translateY(8%);
+    }
+    65%{
+        transform: translateY(-4%);
+    }
+    80%{
+        transform: translateY(4%);
+    }
+    95%{
+        transform: translateY(-2%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+
+.p1-chip {
+    width: 48px;
+    height: 48px;
+    background: url(red.png) no-repeat;
+    position: relative;
+    z-index: -1;
+}
+
+.p2-chip {
+    width: 48px;
+    height: 48px;
+    background: url(green.png) no-repeat;
+    position: relative;
+    z-index: -1;
+}
+
+.win {
+    background-color: yellow;
+}
+
+.c0 { left: 2px; }
+.c1 { left: 52px; }
+.c2 { left: 102px; }
+.c3 { left: 152px; }
+.c4 { left: 202px; }
+.c5 { left: 252px; }
+.c6 { left: 302px; }
+
+.r0 { top: -50px; }
+.r1 { top: -100px; }
+.r2 { top: -150px; }
+.r3 { top: -200px; }
+.r4 { top: -250px; }
+.r5 { top: -300px; }
+
+
+.chipSlideDown-r0 {
+    animation-name: chipSlideDown-r0;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    visibility: visible !important;
+}
+
+.chipSlideDown-r1 {
+    animation-name: chipSlideDown-r1;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    visibility: visible !important;
+}
+.chipSlideDown-r2 {
+    animation-name: chipSlideDown-r2;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    visibility: visible !important;
+}
+.chipSlideDown-r3 {
+    animation-name: chipSlideDown-r3;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    visibility: visible !important;
+}
+
+.chipSlideDown-r4 {
+    animation-name: chipSlideDown-r4;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    visibility: visible !important;
+}
+.chipSlideDown-r5 {
+    animation-name: chipSlideDown-r5;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    visibility: visible !important;
+}
+
+@keyframes chipSlideDown-r0 {
+    0%  { transform: translateY(-330px); }
+    20% { transform: translateY(-240px); }
+    40% { transform: translateY(-180px); }
+    60% { transform: translateY(-120px); }
+    80% { transform: translateY(-60px);  }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes chipSlideDown-r1 {
+    0%  { transform: translateY(-280px); }
+    20% { transform: translateY(-220px); }
+    40% { transform: translateY(-160px); }
+    60% { transform: translateY(-120px); }
+    80% { transform: translateY(-60px);  }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes chipSlideDown-r2 {
+    0%  { transform: translateY(-230px); }
+    25% { transform: translateY(-130px); }
+    50% { transform: translateY(-70px); }
+    75% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes chipSlideDown-r3 {
+    0%  { transform: translateY(-180px); }
+    33% { transform: translateY(-120px); }
+    66% { transform: translateY(-60px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes chipSlideDown-r4 {
+    0%  { transform: translateY(-130px); }
+    33% { transform: translateY(-70px); }
+    66% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes chipSlideDown-r5 {
+    0%  { transform: translateY(-80px); }
+    66% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
 

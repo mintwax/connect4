@@ -1,38 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title> Connect Four </title>
+<title>Connect Four</title>
 
 
-<style type="text/css">
-<!--
-@import "connect4.css";
--->
-</style>
-
+<link rel="stylesheet" type="text/css" href="connect4.css" />
 <script src="lib/jquery.min.js"></script>
-<script src="../lib/Connect4.js"></script>
-
-<script type="text/javascript">
-
-$(document).ready(function(){
-
-    game = new Connect4();
-
-    $( ".grid" ).click(function(e) {
-        x = e.pageX - 100;
-        y = e.pageY - 100;
-
-        i = Math.floor(x / 50);
-        j = game.get_next_empty_slot(i);
-
-        alert(e.pageX + ' , ' + e.pageY + ' i=' + i + ' j=' + j);
-    });
-});
-
-</script>
+<script src="../build/bundle.js"></script>
 
 <h1>Connect Four</h1>
+
+<button id="new_game">New Game</button><br>
+<br>
+<div id="whoisup"></div><br>
 
 <table class="grid">
     <tr><td id="c0r5"><img src="blank.gif"></td>
@@ -90,6 +70,9 @@ $(document).ready(function(){
     </tr>
 
 </table>
+
+<div id="animatechip"></div>
+
 
 </body>
 </html>
