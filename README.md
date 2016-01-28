@@ -4,7 +4,10 @@
 
 ## Description
 
-The classic game of wits and dexteritx for ages 2 to 92.  Get four or more in a row to win.  Can be diaganol, vertical or horizontal.
+The classic game of wits and dexterity for ages 2 to 92.  Get four or more in a row to win.  Can be diaganol, vertical or horizontal.
+
+![Alt text](/static/screenshot.jpg?raw=true "Screenshot")
+
 
 ## Unit testing
 
