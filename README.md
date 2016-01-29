@@ -33,32 +33,33 @@ nodejs --version == v0.10.25
 
 ## To Play
 
-Open up static/index.html in your browser.
+1. clone the repo
+
+2. open up static/index.html in your chromium browser.
 
 Tested on chromium 45 on ubuntu 14.
-
 
 ## Source
 
 src/
 
-1) main.js - this handles the ux such as clicks and animation
-2) Connect4.js - stores the rack and moves and detects wins
+1. main.js - this handles the ux such as clicks and animation
+2. Connect4.js - stores the rack and moves and detects wins
 
 static/
 
-1) connect4.css - keyframe animation, styles
-2) various image files
-3) lib/ contains the jquery js file
+1. connect4.css - keyframe animation, styles
+2. various image files
+3. lib/ contains the jquery js file
 
 build/
 
-1) bundle.js - webpack+babel generated from src/*js
+1. bundle.js - webpack+babel generated from src/*js
 
 tests/
 
-1) Connect4Spec.js - Connect4.js unit test cases
-2) HelperSpec.js - customer matchers
+1. Connect4Spec.js - Connect4.js unit test cases
+2. HelperSpec.js - customer matchers
 
 
 ## References
